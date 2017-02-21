@@ -53,3 +53,4 @@ contact.load()
 -- Load Resources
 
 dofile(modpath.."/contact.lua") -- Contact Functionality
+dofile(modpath.."/report.lua")  -- Report Functionality

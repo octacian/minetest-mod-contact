@@ -13,5 +13,5 @@ Not all of the features mentioned above are done, so here's what is and what isn
 - [ ] Admin Dashboard
 - [x] Contact
 - [ ] Conversations
-- [ ] Report
+- [x] Report
 - [ ] Lock/Hide
