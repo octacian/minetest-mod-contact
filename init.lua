@@ -4,6 +4,9 @@ contact         = {}
 local modpath   = minetest.get_modpath("contact")
 local worldpath = minetest.get_worldpath()
 
+-- Formspec GUI related stuff
+contact.gui_bg = "bgcolor[#080808BB;true]background[5,5;1,1;gui_formbg.png;true]"
+
 -- [function] Logger
 function contact.log(content, log_type)
   assert(content, "contact.log: content nil")
@@ -46,3 +49,7 @@ minetest.register_on_shutdown(contact.save)
 
 -- Load on start
 contact.load()
+
+-- Load Resources
+
+dofile(modpath.."/contact.lua") -- Contact Functionality

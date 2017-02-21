@@ -11,7 +11,7 @@ An admin/moderator can be assigned to each case, as all with the `contact` privi
 Not all of the features mentioned above are done, so here's what is and what isn't.
 
 - [ ] Admin Dashboard
-- [ ] Contact
+- [x] Contact
 - [ ] Conversations
 - [ ] Report
 - [ ] Lock/Hide

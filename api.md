@@ -19,3 +19,16 @@ Loads everything stored in the contact world-files to the global `contact` table
 __Usage:__ `contact.save()`
 
 Gathers specific data from the global `contact` table and saves it in `<worldname>/mod_contact.txt`. __Note:__ this is automatically called at shutdown and whenever specific actions take place.
+
+#### `toggle_main`
+__Usage:__ `contact.toggle_main(<player name (string)>, <show/hide (boolean>, <error message (string)>, <form fields (table)>`
+
+This allows an external mod to show the contact form to any specific player. By default, the formspec is shown when I player uses the `/contact` command. Only the `name` string is required, and should be the name of a player. The second parameter allows toggling between showing/updating the formspec or hiding it with `true`/`false` (default: `true`). The third parameter allows one to specify a message to show at the bottom, typically used for errors. The final parameter is used to pre-fill the form fields (see below for structure).
+
+__Example:__
+```lua
+contact.toggle_main("singleplayer", true, "Warning!", {
+  subject = "Test",
+  msg = "Hello World!",
+})
+```
