@@ -72,6 +72,7 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
         reason  = fields.reason,
         target  = fields.target,
         info    = fields.info,
+        dtime   = contact.date(),
       }
 
       -- Insert Data
@@ -80,8 +81,6 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
       contact.toggle_report(name, "", false)
       -- Print to chat
       minetest.chat_send_player(name, "Report filed!")
-
-      contact.log(dump(contact.reports))
     end
   end
 end)

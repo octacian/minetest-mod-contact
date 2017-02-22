@@ -14,6 +14,11 @@ function contact.log(content, log_type)
   minetest.log(log_type, "[contact] "..content)
 end
 
+-- [function] Get date
+function contact.date()
+  return os.date("%x %H:%M:%p")
+end
+
 -- [function] Load
 function contact.load()
   local res = io.open(worldpath.."/mod_contact.txt", "r")

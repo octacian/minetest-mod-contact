@@ -51,6 +51,7 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
         from    = name,
         subject = fields.subject,
         msg     = fields.msg,
+        dtime   = contact.date(),
       }
 
       -- Insert Data
