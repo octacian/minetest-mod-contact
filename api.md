@@ -54,3 +54,18 @@ contact.toggle_report("singleplayer", "otherplayer", true, {
   }
 })
 ```
+
+## Dash
+The dashboard is composed of several different formspecs to allow tabs and views. Only one API function is available to other mods, as documented below. However, it is important to know that if you wish to customize the formspecs, you should modify the `forms` table in `dash.lua`.
+
+#### `show_dash`
+__Usage:__ `contact.show_dash(<player name (string)>, <form name (string)>, <show/hide (boolean)>, <...>)`
+
+This allows an external mod to show the dashboard to any specific player (specified by `name`). By default, the formspec is shown when a player uses the `/contact_admin` command which requires the `contact` privilege. The player name and form name parameters are the only ones required. If not specified, show/hide will default to show (`true`). Finally, any other parameters can be passed to the `get` function of each form by adding them after show/hide like normal parameters.
+
+__Example:__
+```lua
+contact.show_dash("singleplayer", "view_msg", true, 12})
+```
+
+In the example, `12` is the message ID being passed to the `view_msg` formspec `get` function.

@@ -59,3 +59,4 @@ contact.load()
 
 dofile(modpath.."/contact.lua") -- Contact Functionality
 dofile(modpath.."/report.lua")  -- Report Functionality
+dofile(modpath.."/dash.lua")    -- Admin Dashboard
